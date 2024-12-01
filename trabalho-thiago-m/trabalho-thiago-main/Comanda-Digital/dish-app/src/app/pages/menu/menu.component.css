@@ -1,0 +1,171 @@
+.header-background {
+  background-color: #2E3A61; /* Cor de fundo azul */
+  width: 100%; /* Garante que ocupa toda a largura da tela */
+  height: 120px; /* Altura fixa */
+  position: absolute; /* Permite que outros elementos fiquem sobrepostos */
+  top: 0;
+  left: 0;
+  justify-content: center; /* Centraliza o título horizontalmente */
+  align-items: center;
+  z-index: -1; /* Coloca o fundo atrás do conteúdo */
+}
+
+/* Estilo do cabeçalho */
+.header {
+  position: relative;
+  height: 120px; /* Altura maior para um cabeçalho mais destacado */
+  display: flex;
+  justify-content: center; /* Centraliza o título horizontalmente */
+  align-items: center; /* Centraliza o título verticalmente */
+  box-sizing: border-box;
+}
+
+/* Botão de voltar */
+.back-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 3rem; /* Aumenta o tamanho do ícone */
+  cursor: pointer;
+  position: absolute; /* Posiciona no canto */
+  top: 50%; /* Centraliza verticalmente */
+  left: 1rem; /* Espaçamento do lado esquerdo */
+  transform: translateY(-50%); /* Ajusta a posição vertical */
+  z-index: 2;
+}
+
+/* Título no cabeçalho */
+.title-header {
+  font-weight: bold;
+  font-size: 3rem; /* Aumenta o tamanho do texto */
+  color: white; /* Mantém a cor branca */
+  margin: 0;
+  padding: 0;
+}
+
+/* Container do menu */
+.menu-container {
+  padding: 2rem;
+  background-color: #f7f7f7;
+  text-align: left;
+  max-width: 900px; /* Define um limite de largura para centralizar o conteúdo */
+  margin: 0 auto; /* Centraliza o container no desktop */
+}
+
+/* Título do menu */
+.menu-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #2E3A61;
+  text-align: center;
+}
+
+/* Itens do menu */
+.sorvete-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Suaviza os efeitos */
+}
+
+.sorvete-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagens */
+.imagem-container {
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+}
+
+.sorvete-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Informações do sorvete */
+.sorvete-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sorvete-name {
+  font-weight: bold;
+  font-size: 1.7rem; /* Nome maior */
+  color: #2E3A61;
+  margin: 0;
+  text-align: center;
+}
+
+.sorvete-description {
+  font-size: 1.2rem; /* Tamanho maior para leitura */
+  color: #2E3A61;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.sorvete-price {
+  font-size: 1.8rem; /* Preço destacado */
+  font-weight: bold;
+  color: #2E3A61;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Botões */
+.order-button {
+  background: linear-gradient(45deg, #2E3A61, #4A5B81);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.order-button:hover {
+  background: linear-gradient(45deg, #1d274b, #2E3A61);
+  transform: scale(1.05);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .menu-container {
+    padding: 2rem 3rem;
+  }
+
+  .sorvete-item {
+    padding: 1.5rem;
+  }
+
+  .imagem-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .sorvete-name {
+    font-size: 1.7rem;
+  }
+
+  .sorvete-description {
+    font-size: 1.2rem;
+  }
+
+  .sorvete-price {
+    font-size: 1.9rem;
+  }
+}

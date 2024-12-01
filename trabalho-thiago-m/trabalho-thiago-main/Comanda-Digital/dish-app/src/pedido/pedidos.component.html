@@ -1,0 +1,7 @@
+<div class="pedido" *ngFor="let pedido of pedidos">
+    <h2>Pedido #{{ pedido.id }}</h2>
+    <p>Cliente: {{ pedido.cliente }}</p>
+    <p>Preço Total: {{ pedido.preco_total | currency:'BRL' }}</p>
+    <p>Status: {{ pedido.status }}</p>
+  </div>
+  

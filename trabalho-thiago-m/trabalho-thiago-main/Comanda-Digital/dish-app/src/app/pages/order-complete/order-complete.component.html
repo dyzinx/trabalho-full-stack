@@ -1,0 +1,33 @@
+<div class="header-background"></div>
+<div class="header">
+    <!-- Botão de voltar -->
+    <button class="back-button" (click)="goBack()">&#8592;</button>
+    
+    <!-- Título -->
+    <h2 class="title-header">La Dolce Crema</h2>
+    
+    <!-- Botão de cancelar pedido -->
+    <button class="cancel-button" (click)="goToOrderCancelled()">Cancelar Pedido</button>
+</div>
+
+<div class="welcome-container">
+    <div class="content">
+        <!-- Título da página -->
+        <h3 class="cancelled-title">Pedido Pronto</h3>
+        
+        <!-- Imagem do produto -->
+        <img src="assets/images/penguim-sorvete.jpg" alt="Penguin enjoying ice cream" class="product-image">
+        
+        <!-- Informações sobre o pedido -->
+        <div class="sorvete-info">
+            <p class="order-info">
+                O valor total do seu pedido é: R$ {{ total | number: '1.2-2' }}
+            </p>
+        </div>
+        
+        <!-- Botão para verificar o status da entrega -->
+        <div class="content-button">
+            <button class="status-button" (click)="goToDeliveryStatus()">Status da Entrega</button>
+        </div>
+    </div>
+</div>

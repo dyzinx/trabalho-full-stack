@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    height: 100vh;
+}
+
+@media (max-width: 600px)
+{
+    body{
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+    }
+
+    .container{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        height: 100vh;
+    }
+
+}
+
+/*Responsividade para telas médias*/
+@media (min-width: 601px) and (max-width: 1200px)
+{
+    body{
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+    }
+
+    .container{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        height: 100vh;
+    }
+
+}
+/*Responsividade para telas grandes*/
+/* Configuração para telas de desktop */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .header, .welcome-container, .content, .content-button {
+        padding: 1rem 2rem; /* Maior espaçamento */
+    }
+
+    .sorvete-info, .price, .product-container {
+        text-align: left;
+        display: flex;
+        align-items: center;
+    }
+
+    .product-content {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}

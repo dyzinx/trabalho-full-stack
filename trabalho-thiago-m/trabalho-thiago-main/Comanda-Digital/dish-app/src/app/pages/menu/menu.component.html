@@ -1,0 +1,21 @@
+<div class="header-background"></div>
+<div class="header">
+  <button class="back-button" (click)="goBack()">&#8592;</button>
+  <h1 class="title-header">La Dolce Crema</h1>
+</div>
+
+<div class="menu-container">
+  <h3 class="menu-title">Cardápio</h3>
+
+  <!-- Cada item de sorvete será clicável para ir aos detalhes -->
+  <div class="sorvete-item" *ngFor="let sorvete of sorvetes" (click)="goToProductDetails(sorvete)">
+    <div class="imagem-container">
+      <img [src]="sorvete.image" alt="{{ sorvete.name }}" class="sorvete-image"/>
+    </div>
+    <div class="sorvete-info">
+      <h4 class="sorvete-name">{{ sorvete.name }}</h4>
+      <p class="sorvete-description">{{ sorvete.description }}</p>
+      <p class="sorvete-price">R$ {{ sorvete.price | number: '1.2-2' }}</p>
+    </div>
+  </div>
+</div>
