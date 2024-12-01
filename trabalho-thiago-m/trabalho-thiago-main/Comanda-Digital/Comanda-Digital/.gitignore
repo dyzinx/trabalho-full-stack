@@ -1,1 +1,4 @@
 Oracle_JDK-23/
+
+target/
+*.jar
