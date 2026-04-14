@@ -1,0 +1,20 @@
+<div class="header-background"></div>
+<div class="header">
+  <!-- Botão de Voltar -->
+  <button class="back-button" (click)="goBack()">&#8592;</button>
+  <h2 class="title-header">La Dolce Crema</h2>
+  <!-- Botão de Home -->
+  <button class="home-button" (click)="goToHome()">&#8962;</button>
+</div>
+
+<div class="welcome-container">
+  <div class="content">
+    <h3 class="cancelled-title">Pedido Cancelado</h3>
+    <div class="sorvete-info">
+      <!-- Imagem do sorvete em escala de cinza -->
+      <img [src]="sorvete?.image" alt="{{ sorvete?.name }}" class="sorvete-image" />
+      <p class="sorvete-name">{{ sorvete?.name }}</p>
+      <p class="order-info">Valor: R$ {{ total | number: '1.2-2' }}</p>
+    </div>
+  </div>
+</div>

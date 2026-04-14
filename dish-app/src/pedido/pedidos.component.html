@@ -1,0 +1,9 @@
+<div class="pedido" *ngFor="let pedido of pedidos">
+  <h2>Pedido #{{ pedido.id }}</h2>
+  <p>Item: {{ pedido.item }}</p> 
+  <p>Preço: {{ pedido.precoUnitario | currency:'BRL' }}</p> 
+  <p>Status: {{ pedido.status }}</p>
+
+  <button (click)="atualizarStatus(pedido.id!, 'Pronto')">Concluir</button>
+  <button (click)="deletarPedido(pedido.id!)">Excluir</button>
+</div>

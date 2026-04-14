@@ -1,0 +1,179 @@
+/* Estilo para o cabeçalho */
+.header-background {
+  background-color: #2E3A61; /* Fundo azul */
+  width: 100%;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.header {
+  position: relative;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.title-header {
+  font-weight: bold;
+  font-size: 48px;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.back-button,
+.home-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 48px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.back-button {
+  left: 16px;
+}
+
+.home-button {
+  right: 16px; /* Alinha à direita */
+}
+
+/* Estilo para a estrutura geral */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #f7f7f7;
+  min-height: calc(100vh - 120px); /* Altura dinâmica considerando o cabeçalho */
+  padding: 20px;
+}
+
+/* Estilo para o conteúdo */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.cancelled-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2E3A61;
+}
+
+/* Imagem do sorvete */
+.sorvete-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.sorvete-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  filter: grayscale(100%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sorvete-name {
+  background-color: #ADA5A5;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.order-info {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 10px;
+}
+
+/* Ajuste no botão */
+.content-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.cancel-button {
+  background-color: #ADA5A5;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  max-width: 200px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cancel-button:hover {
+  background-color: #8c8c8c; /* Cor mais escura ao passar o mouse */
+}
+
+/* Ajustes para telas pequenas */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .sorvete-image {
+    width: 400px;
+    height: 300px;
+  }
+
+  .sorvete-name {
+    font-size: 1.7rem;
+  }
+
+  .order-info {
+    font-size: 2rem;
+  }
+
+  .cancel-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Ajustes para telas grandes */
+@media (min-width: 1024px) {
+  .sorvete-image {
+    width: 800px;
+    height: 400px;
+  }
+
+  .sorvete-name {
+    font-size: 1.2rem;
+  }
+
+  .order-info {
+    font-size: 1.8rem;
+  }
+
+  .cancel-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
+}

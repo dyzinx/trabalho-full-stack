@@ -1,0 +1,6 @@
+<h1>Lista de Pratos</h1>
+<ul>
+  <li *ngFor="let dish of dishes">
+    {{ dish.name }} - {{ dish.description }} - R$ {{ dish.price }}
+  </li>
+</ul>
