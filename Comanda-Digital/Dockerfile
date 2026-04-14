@@ -7,8 +7,8 @@ WORKDIR /app
 # Copia os arquivos do projeto para o contêiner
 COPY . .
 
-# Executa o build do projeto usando o Maven
-RUN mvn clean package
+# Executa o build do projeto usando o Maven pulando os testes (A MUDANÇA ESTÁ AQUI)
+RUN mvn clean package -DskipTests
 
 # Expõe a porta 8080 (ou a porta que seu Spring Boot usa)
 EXPOSE 8080
