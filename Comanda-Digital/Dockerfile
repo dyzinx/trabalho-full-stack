@@ -1,17 +1,21 @@
-# Imagem base com JDK 17 e Maven pré-instalados
-FROM maven:3.8.7-eclipse-temurin-17
-
-# Define o diretório de trabalho dentro do contêiner
+# Estágio de Build
+FROM maven:3.8.7-eclipse-temurin-17 AS build
 WORKDIR /app
 
-# Copia os arquivos do projeto para o contêiner
+# Copia tudo para dentro do container
 COPY . .
 
-# Executa o build do projeto usando o Maven pulando os testes (A MUDANÇA ESTÁ AQUI)
+# Executa o build pulando os testes para evitar erro de banco de dados
 RUN mvn clean package -DskipTests
 
-# Expõe a porta 8080 (ou a porta que seu Spring Boot usa)
+# Estágio de Execução
+FROM eclipse-temurin:17-jdk-jammy
+WORKDIR /app
+
+# Copia apenas o JAR gerado no estágio anterior
+COPY --from=build /app/target/Comanda-Digital-0.0.1-SNAPSHOT.jar app.jar
+
 EXPOSE 8080
 
-# Define o comando para rodar a aplicação
-CMD ["java", "-jar", "target/Comanda-Digital-0.0.1-SNAPSHOT.jar"]
+# Comando para rodar a aplicação usando o novo nome 'app.jar'
+ENTRYPOINT ["java", "-jar", "app.jar"]
