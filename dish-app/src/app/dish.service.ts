@@ -15,7 +15,7 @@ export interface Dish {
   providedIn: 'root',
 })
 export class DishService {
-  private apiUrl = 'http://localhost:8080/dishes'; 
+  private apiUrl = 'https://comanda-backend.onrender.com/api/dishes'; 
 
   constructor(private http: HttpClient) {}
 

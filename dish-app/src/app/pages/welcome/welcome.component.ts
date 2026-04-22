@@ -17,6 +17,11 @@ export class WelcomeComponent {
     private http: HttpClient
   ) {}
 
+  // AQUI ESTÁ A FUNÇÃO QUE FALTAVA PARA O BOTÃO FUNCIONAR!
+  startSession() {
+    this.router.navigate(['/menu']);
+  }
+
   // Exemplo de como resolver o erro de 'implicit any'
   fazerChamadaExemplo() {
     this.http.get('url-da-api').subscribe({

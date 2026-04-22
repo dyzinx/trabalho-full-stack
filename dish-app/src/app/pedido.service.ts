@@ -14,7 +14,7 @@ export interface Pedido {
   providedIn: 'root'
 })
 export class PedidoService {
-  private apiUrl = 'http://localhost:8080/pedidos'; 
+  private apiUrl = 'https://comanda-backend.onrender.com/pedidos';
 
   constructor(private http: HttpClient) { }
 
