@@ -21,7 +21,6 @@ export class OrderCompleteComponent {
   }
 
   goBack() {
-    // Mudamos para navegar para o menu, que é mais seguro que o "back" puro
     this.router.navigate(['/menu']);
   }
 
@@ -30,7 +29,8 @@ export class OrderCompleteComponent {
   }
 
   goToDeliveryStatus() {
-    // Rota hipotética para o status
     console.log('Navegando para status da entrega...');
+    // AQUI ESTÁ A ORDEM DE NAVEGAÇÃO QUE FALTAVA:
+    this.router.navigate(['/delivery-status']); 
   }
 }

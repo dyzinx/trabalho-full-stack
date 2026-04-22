@@ -19,13 +19,11 @@ export class OrderCancelledComponent {
     this.total = this.sorvete?.price || 0;
   }
 
-  // Método para voltar ao menu
   goBack() {
     this.router.navigate(['/menu']);
   }
 
-  // Método para redirecionar à página inicial
   goToHome() {
-    this.router.navigate(['/welcome']); // Redireciona para a página inicial
+    this.router.navigate(['/welcome']);
   }
 }
