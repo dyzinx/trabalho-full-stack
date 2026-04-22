@@ -15,11 +15,23 @@ public class Dish {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
     private String name;
     private String description;
     private Double price;
+    
+    // NOVO CAMPO: Adicionado para receber a imagem do Angular
+    private String image;
 
     // Getters e Setters manuais
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
@@ -42,5 +54,14 @@ public class Dish {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    // Getters e Setters da Imagem
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
