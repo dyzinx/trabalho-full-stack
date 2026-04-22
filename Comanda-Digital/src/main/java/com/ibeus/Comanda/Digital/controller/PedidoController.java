@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import com.ibeus.Comanda.Digital.model.Pedido;
 import com.ibeus.Comanda.Digital.service.PedidoService;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/pedidos")
 public class PedidoController {
