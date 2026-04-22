@@ -12,7 +12,7 @@ import com.ibeus.Comanda.Digital.service.PedidoService;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/pedidos")
+@RequestMapping("api/pedidos")
 public class PedidoController {
 
     @Autowired
